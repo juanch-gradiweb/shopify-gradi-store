@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "banner": {
+      "type": "product-recommendations",
+      "settings": {
+      }
+    },
+    "product-grid": {
+      "type": "productsgrid",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}
