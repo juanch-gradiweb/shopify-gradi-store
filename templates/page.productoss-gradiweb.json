@@ -5,6 +5,11 @@
       "settings": {
       }
     },
+    "product-grid": {
+      "type": "productsgrid",
+      "settings": {
+      }
+    },
     "1642726181e77d0b29": {
       "type": "collection-list",
       "blocks": {
@@ -44,6 +49,7 @@
   },
   "order": [
     "main",
+    "product-grid",
     "1642726181e77d0b29"
   ]
 }
