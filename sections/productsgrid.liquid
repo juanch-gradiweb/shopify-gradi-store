@@ -8,7 +8,7 @@
 
 <noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
 {%- liquid
-  assign products_to_display = section.settings.collection.all_products_count
+  assign products_to_display = section.settings.collection.all
   %}
 
 {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
