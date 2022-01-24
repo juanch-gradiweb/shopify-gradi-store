@@ -17,6 +17,7 @@
 .card.card--soft {
   background-color: rgba(var(--color-foreground), 0.04);
   color: rgb(var(--color-foreground));
+  
 }
 
 .card .icon-wrap {
