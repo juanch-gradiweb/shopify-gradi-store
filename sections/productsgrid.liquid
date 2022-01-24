@@ -52,9 +52,11 @@ body{
 
 <h1>{{ collections.producstgrid2.title }}</h1>
 
+
 {%- if collections.producstgrid2.description != blank -%}
   <p>{{ collections.producstgrid2.description }}</p>
 {%- endif -%}
+{% render section.settings.motor_position%}
 
 <ul class= "product-container">
   {%- for product in collections.producstgrid2.products -%}
