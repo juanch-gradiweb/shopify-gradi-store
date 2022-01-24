@@ -16,7 +16,10 @@ body{
      max-height: 300px;
      max-width: 350px;
      display: flex;
-    flex-direction: column;
+     flex-direction: column;
+    
+   }
+   .no-decoration{
       text-decoration: none;
    }
    
@@ -56,7 +59,7 @@ body{
 <ul class= "product-container">
   {%- for product in collections.producstgrid2.products -%}
     <li>
-      <a class="card"  href="{{ product.url | within: collections.producstgrid2 }}">
+      <a class="card no-decoration"  href="{{ product.url | within: collections.producstgrid2 }}">
         <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt="">
         {{ product.title }}
         <p>
@@ -77,3 +80,22 @@ body{
     </li>
   {%- endfor -%}
 </ul>
+{% schema %}
+ {
+      "type": "select",
+      "id": "motor_position",
+      "options": [
+        {
+          "value": "central",
+          "label": "Motor central"
+        },
+        {
+          "value": "front",
+          "label": "Motor delantero"
+        }
+        
+      ],
+      "default": "front",
+      "label": "Seleccione autos por ubicacion del motor"
+    }
+    {% endschema %}
