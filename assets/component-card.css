@@ -24,7 +24,6 @@
   white-space: nowrap;
   transition: transform var(--duration-short) ease;
   overflow: hidden;
-
 }
 
 .card--media {
@@ -35,6 +34,7 @@
 .card--text-only {
   display: flex;
   justify-content: center;
+ 
 }
 
 .card--text-only.card--product {
