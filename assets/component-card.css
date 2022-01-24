@@ -24,6 +24,7 @@
   white-space: nowrap;
   transition: transform var(--duration-short) ease;
   overflow: hidden;
+
 }
 
 .card--media {
