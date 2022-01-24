@@ -1,6 +1,7 @@
 <style>
 body{
   overflow-x: hidden;
+  max-width: 1200px;
 }
    ul{
      list-style:none;
@@ -64,10 +65,10 @@ body{
             {{ product.price | money_without_trailing_zeros }}
           {%- endif -%}
         </p>
-        <p>
+        {% comment %} <p>
           <span class="visuallyhidden">by</span>
           {{ product.vendor }}
-        </p>
+        </p> {% endcomment %}
       </a>
     </li>
   {%- endfor -%}
