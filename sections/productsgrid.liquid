@@ -7,7 +7,7 @@
    .card{
      margin:15px;
      max-height: 300px;
-     width: 350px;
+     max-width: 350px;
      display: flex;
     flex-direction: column;
    }
@@ -44,8 +44,8 @@
 
 <ul class= "product-container">
   {%- for product in collection.products -%}
-    <li class="card">
-      <a class="product-card" href="{{ product.url | within: collection }}">
+    <li>
+      <a class="card"  href="{{ product.url | within: collection }}">
         <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt="">
         {{ product.title }}
         <p>
