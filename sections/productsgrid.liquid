@@ -15,7 +15,7 @@ body{
    }
    .card{
      margin:15px;
-     max-height: 300px;
+     max-height: 340px;
      max-width: 350px;
      display: flex;
      flex-direction: column;
@@ -23,6 +23,10 @@ body{
    }
    .no-decoration{
       text-decoration: none;
+   }
+   .form-card{
+      justify-self: end;
+      margin-bottom: 10px;
    }
    
   .img-size{
@@ -115,9 +119,9 @@ body{
                 {%- endform -%} {% endcomment %}
                 
         </p>
-        <form method="post" action="/cart/add">
-  <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
-  <input class= "product-form__submit" name="add" value="Add to cart" type="submit" />
+        <form class= "form-card" method="post" action="/cart/add">
+     <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
+  <input class= "product-form__submit button button--full-width" name="add" value="Add to cart" type="submit" />
 </form>
         
         {% comment %} <p>
