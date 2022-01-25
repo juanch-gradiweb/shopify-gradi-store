@@ -94,8 +94,28 @@ body{
   {%- endfor -%}
 </ul>
 {% schema %}
-  {
-      "name": "Slideshow"
+ {
+        "name": "Slideshow",
+        "tag": "section",
+        "class": "slideshow"
+      "settings": [
+      "type": "select",
+      "id": "motor_position",
+      "label": "Ubicacion del motor",
+      "options": [
+        {
+          "value": "central",
+          "label": "Motor central"
+        },
+        {
+          "value": "front",
+          "label": "Motor delantero"
+        }
+        
+      ],
+      "default": "front"
+   
+      ]
     }
       
     {% endschema %}
