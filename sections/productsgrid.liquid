@@ -1,3 +1,5 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 <style>
 body{
   
@@ -100,7 +102,7 @@ body{
       "settings": [
       "type": "select",
       "id": "motor_position",
-      "label": "Seleccione autos por ubicacion del motor",
+      "label": "Ubicacion del motor",
       "options": [
         {
           "value": "central",
