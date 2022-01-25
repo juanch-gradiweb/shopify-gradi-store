@@ -26,7 +26,7 @@ body{
    }
    
   .img-size{
-    max-height:240px;
+    max-height:200px;
   }
   .product-card {
     box-sizing: border-box;
@@ -86,7 +86,7 @@ body{
           {%- else -%}
             {{ product.price | money_without_trailing_zeros }}
           {%- endif -%}
-          {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+          {% comment %} {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <div class="product-form__buttons">
                     <button
@@ -112,8 +112,14 @@ body{
                       {{ form | payment_button }}
                     {%- endif -%}
                   </div>
-                {%- endform -%}
+                {%- endform -%} {% endcomment %}
+                
         </p>
+        <form method="post" action="/cart/add">
+  <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
+  <input name="add" value="ORDER NOW" type="submit" />
+</form>
+        
         {% comment %} <p>
           <span class="visuallyhidden">by</span>
           {{ product.vendor }}
