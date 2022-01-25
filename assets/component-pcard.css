@@ -1,0 +1,52 @@
+body{
+  
+    max-width: 1200px;
+  }
+     ul{
+       list-style:none;
+    }
+     .product-container{
+       display: flex;
+       flex: wrap;
+       max-width: 1200px;
+     }
+     .card{
+       margin:15px;
+       height: 350px;
+       max-width: 350px;
+       display: flex;
+       flex-direction: column;
+      
+     }
+     .no-decoration{
+        text-decoration: none;
+     }
+     .form-card{
+        justify-self: end;
+        margin-bottom: 10px;
+     }
+     
+    .img-size{
+      max-height:240px;
+    }
+    .product-card {
+      box-sizing: border-box;
+      float: left;
+      min-height: 1em;
+      padding-left: 2em;
+      vertical-align: top;
+      width: 25%;
+      
+    }
+  
+    .visuallyhidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap;
+    }

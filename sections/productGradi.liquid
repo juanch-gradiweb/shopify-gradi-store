@@ -1,0 +1,30 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-pcard.css' | asset_url | stylesheet_tag }}
+ <div class="card " >
+        <div class ="img-size" >
+           <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt=" car image">
+        </div>
+     
+        {{ product.title }}
+        <p>
+          <span aria-hidden="true">—</span>
+          {%- if product.price_varies -%}
+            <span class="visuallyhidden">Empezando en:</span>
+            {{ product.price_min | money_without_trailing_zeros }}
+            <span aria-hidden="true">+</span>
+          {%- else -%}
+           <span >Precio:</span>  
+           {{ product.price | money_without_trailing_zeros }}
+          {%- endif -%}
+       
+                
+        </p>
+        <form class= "form-card" method="post" action="/cart/add">
+       <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
+       <input class= "product-form__submit button button--full-width" name="add" value="Add to cart" type="submit" />
+      </form>
+        
+     
+
+      </div>

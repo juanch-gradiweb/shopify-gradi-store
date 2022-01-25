@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "productsgrid",
+      "type": "productGradi",
       "blocks": {
         "vendor": {
           "type": "text",
@@ -65,15 +65,9 @@
       ],
       "settings": {
       }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "product-recommendations"
+    "main"
   ]
 }
