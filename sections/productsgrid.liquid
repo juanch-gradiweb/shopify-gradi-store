@@ -51,15 +51,18 @@ body{
 
 
 <h2> numero de productos: {{ collections.producstgrid2.products_count }}: </h2>
+ 
+ <div>select : {{ section.settings.motor_position }}</div>
 
 <h1>{{ collections.producstgrid2.title }}</h1>
+
 
 
 {%- if collections.producstgrid2.description != blank -%}
   <p>{{ collections.producstgrid2.description }}</p>
 {%- endif -%}
 
-{{ section.settings.motor_position }}
+
 {% comment %} {%- assign collection = collections[section.settings.motor_position] -%} {% endcomment %}
 
 <ul class= "product-container">
@@ -88,9 +91,14 @@ body{
 </ul>
 {% schema %}
  {
+     
+        "name": "dropSelect",
+        "tag": "section",
+        "class": "slideshow"
       "settings": [
       "type": "select",
       "id": "motor_position",
+      "label": "Seleccione autos por ubicacion del motor",
       "options": [
         {
           "value": "central",
@@ -102,8 +110,8 @@ body{
         }
         
       ],
-      "default": "front",
-      "label": "Seleccione autos por ubicacion del motor"
+      "default": "front"
+   
       ]
     }
       
