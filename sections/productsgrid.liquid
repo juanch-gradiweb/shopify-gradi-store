@@ -53,10 +53,12 @@ body{
 <h2> numero de productos: {{ collections.producstgrid2.products_count }}: </h2>
  
  <div>select : {{ section.settings.motor_position }}</div>
-
+  
 <h1>{{ collections.producstgrid2.title }}</h1>
 
-
+<div id="shopify-section-[motor_position]" class="shopify-section">
+  // Output of the section content
+</div>
 
 {%- if collections.producstgrid2.description != blank -%}
   <p>{{ collections.producstgrid2.description }}</p>
