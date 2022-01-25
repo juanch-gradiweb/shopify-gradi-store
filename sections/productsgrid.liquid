@@ -1,15 +1,13 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{% comment %} {{ 'component-pcard.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
 <style>
 body{
   
     max-width: 1200px;
   }
-     ul{
+  ul{
        list-style:none;
     }
-     .product-container{
+  .product-container{
        display: flex;
        flex: wrap;
        max-width: 1200px;
@@ -55,6 +53,11 @@ body{
       white-space: nowrap;
     }
     </style>
+ {{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'component-pcard.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+
 {%- assign collection = collections[section.settings.motor_position] -%}
 {% comment %} <h2> numero de productos: {{ collection.products_count }}: </h2> {% endcomment %}
  
