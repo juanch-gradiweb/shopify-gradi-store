@@ -10,11 +10,15 @@
 .product-details{
   margin:10px;
   max-height: 450px;
-  max-width: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
       
      }
+.img-size{
+max-height: 450px;
+
+}
  </style>
 
  <div class="p-container" >
@@ -23,6 +27,7 @@
         </div>
         <div class = "product-details">
         {{ product.title }}
+        {{ product.description }}
         <p>
           <span aria-hidden="true">—</span>
           {%- if product.price_varies -%}
@@ -30,7 +35,7 @@
             {{ product.price_min | money_without_trailing_zeros }}
             <span aria-hidden="true">+</span>
           {%- else -%}
-           <span >Precio:</span>  
+           <p >Precio:</p>  
            {{ product.price | money_without_trailing_zeros }}
           {%- endif -%}
        
