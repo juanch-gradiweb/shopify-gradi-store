@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "productGradi",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
