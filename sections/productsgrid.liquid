@@ -48,6 +48,8 @@ body{
     white-space: nowrap;
   }
 </style>
+
+
 <h2> numero de productos: {{ collections.producstgrid2.products_count }}: </h2>
 
 <h1>{{ collections.producstgrid2.title }}</h1>
@@ -56,8 +58,9 @@ body{
 {%- if collections.producstgrid2.description != blank -%}
   <p>{{ collections.producstgrid2.description }}</p>
 {%- endif -%}
-<select id= {{section.settings.motor_position}} class ="shopify-section"></select>
-{% render section.settings.motor_position %}
+
+{{ section.settings.motor_position }}
+{% comment %} {%- assign collection = collections[section.settings.motor_position] -%} {% endcomment %}
 
 <ul class= "product-container">
   {%- for product in collections.producstgrid2.products -%}
