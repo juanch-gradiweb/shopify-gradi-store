@@ -51,30 +51,30 @@ body{
   }
 </style>
 
-
-<h2> numero de productos: {{ collections.producstgrid2.products_count }}: </h2>
+{%- assign collection = collections[section.settings.motor_position] -%}
+<h2> numero de productos: {{ collection.products_count }}: </h2>
  
  {% comment %} <div>select : {{ section.settings.motor_position }}</div> {% endcomment %}
   
-<h1>{{ collections.producstgrid2.title }}</h1>
+<h1>{{ collection.title }}</h1>
 
 
 <div id="shopify-section-[id]" class="shopify-section">
- {{ section.settings.motor_position }}
- output
+ {{ section.settings.motor_position }} motor position cars :
+
 </div>
 
-{%- if collections.producstgrid2.description != blank -%}
-  <p>{{ collections.producstgrid2.description }}</p>
+{%- if collection.description != blank -%}
+  <p>{{ collection.description }}</p>
 {%- endif -%}
 
 
-{% comment %} {%- assign collection = collections[section.settings.motor_position] -%} {% endcomment %}
+{% comment %}  {% endcomment %}
 
 <ul class= "product-container">
-  {%- for product in collections.producstgrid2.products -%}
+  {%- for product in collection.products -%}
     <li>
-      <a class="card no-decoration"  href="{{ product.url | within: collections.producstgrid2 }}">
+      <a class="card no-decoration"  href="{{ product.url | within: collection }}">
         <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt="">
         {{ product.title }}
         <p>
