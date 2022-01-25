@@ -54,7 +54,7 @@ body{
 
 <h2> numero de productos: {{ collections.producstgrid2.products_count }}: </h2>
  
- <div>select : {{ section.settings.motor_position }}</div>
+ {% comment %} <div>select : {{ section.settings.motor_position }}</div> {% endcomment %}
   
 <h1>{{ collections.producstgrid2.title }}</h1>
 
@@ -94,29 +94,8 @@ body{
   {%- endfor -%}
 </ul>
 {% schema %}
- {
-     
-        "name": "dropSelect",
-        "tag": "section",
-        "class": "slideshow"
-      "settings": [
-      "type": "select",
-      "id": "motor_position",
-      "label": "Ubicacion del motor",
-      "options": [
-        {
-          "value": "central",
-          "label": "Motor central"
-        },
-        {
-          "value": "front",
-          "label": "Motor delantero"
-        }
-        
-      ],
-      "default": "front"
-   
-      ]
+  {
+      "name": "Slideshow"
     }
       
     {% endschema %}
