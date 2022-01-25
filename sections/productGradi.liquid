@@ -1,11 +1,27 @@
 {{ 'template-collection.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 {{ 'component-pcard.css' | asset_url | stylesheet_tag }}
- <div class="card " >
+ <style>
+ .p-container{
+     display: flex;
+     flex:wrap;
+
+ }
+.product-details{
+  margin:10px;
+  max-height: 450px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+      
+     }
+ </style>
+
+ <div class="p-container" >
         <div class ="img-size" >
            <img src="{{ product.featured_image.src | img_url: '1024x' }}" alt=" car image">
         </div>
-     
+        <div class = "product-details">
         {{ product.title }}
         <p>
           <span aria-hidden="true">—</span>
@@ -23,7 +39,9 @@
         <form class= "form-card" method="post" action="/cart/add">
        <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
        <input class= "product-form__submit button button--full-width" name="add" value="Add to cart" type="submit" />
-      </form>
+       </form>
+        </div>
+        
         
      
 
