@@ -15,7 +15,7 @@ body{
    }
    .card{
      margin:15px;
-     height: 340px;
+     height: 350px;
      max-width: 350px;
      display: flex;
      flex-direction: column;
@@ -26,7 +26,6 @@ body{
    }
    .form-card{
       justify-self: end;
-      align-self: end;
       margin-bottom: 10px;
    }
    
@@ -61,7 +60,7 @@ body{
  
  {% comment %} <div>select : {{ section.settings.motor_position }}</div> {% endcomment %}
   
-<h1>{{ collection.title }}</h1>
+<h1>Titulo de la colleccion :{{ collection.title }}</h1>
 
 
 <div id="shopify-section-[id]" class="shopify-section">
@@ -96,9 +95,9 @@ body{
                 
         </p>
         <form class= "form-card" method="post" action="/cart/add">
-     <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
-  <input class= "product-form__submit button button--full-width" name="add" value="Add to cart" type="submit" />
-</form>
+       <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
+       <input class= "product-form__submit button button--full-width" name="add" value="Add to cart" type="submit" />
+      </form>
         
         {% comment %} <p>
           <span class="visuallyhidden">by</span>
