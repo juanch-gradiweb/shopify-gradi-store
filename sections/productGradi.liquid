@@ -52,7 +52,7 @@ width:600px;
         
          </div>
          <script>
-           let variants =  {{ settings.colorvariant }}.split(',');
+           let variants =  `${{ settings.colorvariant }}`.split(',');
            let colorsArray = variants.map((variant)=>(variant.split(":")) );
            let all = colorsArray.length;
            console.log( all);
