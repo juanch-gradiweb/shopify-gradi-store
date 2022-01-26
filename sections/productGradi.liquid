@@ -48,8 +48,21 @@ width:600px;
        <input name="id" value="{{ product.variants.first.id }}" type="hidden" />
        <input class= "product-form__submit button button--full-width" name="add" value="Add to cart" type="submit" />
        </form>
+
+         {% assign colorsArray = {{ settings.colorvariant }} | split: "," %}
+
+           {% for color in colorsArray %}
+           {{ color }}
+           {% endfor %}
+          {% for variant in product.variants %}
+         {% for option in variant.options %}
+          -    {{ option }}
+        {% endfor %}
+        {% endfor %}
+         {{settings.colorvariant}}
+
         </div>
-        
+
          </div>
          <script>
            let variants =  `${{ settings.colorvariant }}`.split(',');
@@ -67,13 +80,7 @@ width:600px;
            }
          
          </script>
-         {% for variant in product.variants %}
-        {% for option in variant.options %}
-       - {{ option }}
-        {% endfor %}
-        {% endfor %}
-         {{settings.colorvariant}}
-         
+
          {% comment %} {% schema %}
  {
         "name": "Color area",
