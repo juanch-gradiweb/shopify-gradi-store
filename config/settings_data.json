@@ -10,7 +10,7 @@
     "type_header_font": "assistant_n4",
     "type_body_font": "assistant_n4",
     "accent_icons": "text",
-    "color-v": "Rojo: #ff0000,\nAzul: #0000ff,\nNegro: #000000,\nAmarillo: #ffff00,\nBlanco: #ffffff,\nPlata: #c0c0c0,\nNaranja: #ffa500,\nVerde: #008000,\nMorado: #800080",
+    "color-v": "Rojo: #ff0000,\nAzul: #0000ff,\nNegro: #000000,\nAmarillo: #ffff00,\nBlanco: #ffffff,\nPlata: #c0c0c0,\nNaranja: #ffa500,\nVerde: #008000,\nMorado: #800080,",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
