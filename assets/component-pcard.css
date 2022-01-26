@@ -16,6 +16,7 @@ body{
        max-width: 350px;
        display: flex;
        flex-direction: column;
+       color: purpe
       
      }
      .no-decoration{
