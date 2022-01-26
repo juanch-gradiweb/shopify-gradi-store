@@ -23,7 +23,7 @@ width:600px;
 
  <div class="p-container" >
         <div class ="img-size" >
-           <img src="{{ product.featured_image.src | img_url: '1024x' }}" width="500" height="600" alt=" car image">
+           <img src="{{ product.featured_image.src | img_url: '1024x' }}" width="600" height="400" alt=" car image">
         </div>
         <div class = "product-details">
         {{ product.title }}
@@ -51,7 +51,7 @@ width:600px;
         </div>
         
          </div>
-         {% schema %}
+         {% comment %} {% schema %}
  {
         "name": "Color area",
         "tag": "section",
@@ -66,4 +66,4 @@ width:600px;
       
     }
       
-    {% endschema %}
+    {% endschema %} {% endcomment %}

@@ -348,5 +348,16 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "text area color variant",
+    "settings": [
+      {
+    "type": "textarea",
+    "id": "color-v",
+    "label": "color de las variantes"
+    }
+    ]
+    
   }
 ]
