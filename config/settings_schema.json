@@ -354,7 +354,7 @@
     "settings": [
       {
         "type": "textarea",
-        "id": "color-v",
+        "id": "colorvariant",
         "label": "color de las variantes"
       }
     ]
