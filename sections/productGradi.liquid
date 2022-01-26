@@ -57,14 +57,23 @@ width:600px;
            let all = colorsArray.length;
            console.log( all);
            for (let i = 0 ; i< all ; i++ ){
-               if (colorsArray[i] === 1){
-
+               let colorArray = colorsArray[i];
+               for (let j = 0; j <colorArray.length; j++){
+                   if(colorArray[0] ){
+                        
+                   }
                }
+               
            }
          
          </script>
-        
+         {% for variant in product.variants %}
+        {% for option in variant.options %}
+       - {{ option }}
+        {% endfor %}
+        {% endfor %}
          {{settings.colorvariant}}
+         
          {% comment %} {% schema %}
  {
         "name": "Color area",
