@@ -50,7 +50,7 @@ width:600px;
        </form>
 
 
-         {% assign colorsArray = {{ settings.colorvariant }} | split: "," %}
+         {% assign colorsArray = {{ settings.colorvariant }} | split: ", " %}
 
            {% for color in colorsArray %}
            {{ color }}
